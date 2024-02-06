@@ -1,7 +1,32 @@
 ﻿@page "/"
+@using TheMovieDB.Services
+@inject TMDBClient TMDB
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<MudPaper MinHeight="100%" Elevation="0" Class="mud-theme-primary pa-6">
+    <MudText Typo="Typo.h3" Class="ma-6">Popular Movies</MudText>
 
-Welcome to your new app.
+    @if (movies is not null)
+    {
+        <ul>
+            @foreach (var movie in movies.Results)
+            {
+                <li>@movie.Title</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Loading movies...</p>
+    }
+</MudPaper>
+
+@code {
+    PopularMoviesPagedResponse? movies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        movies = await TMDB.GetPopularMoviesPagedResponseAsync();
+    }
+}
