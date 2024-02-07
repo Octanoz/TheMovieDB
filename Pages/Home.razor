@@ -4,23 +4,21 @@
 
 <PageTitle>Home</PageTitle>
 
-<MudPaper MinHeight="100%" Elevation="0" Class="mud-theme-primary pa-6">
-    <MudText Typo="Typo.h3" Class="ma-6">Popular Movies</MudText>
+<MudText Typo="Typo.h3" Class="ma-6">Popular Movies</MudText>
 
-    @if (movies is not null)
-    {
-        <ul>
-            @foreach (var movie in movies.Results)
-            {
-                <li>@movie.Title</li>
-            }
-        </ul>
-    }
-    else
-    {
-        <p>Loading movies...</p>
-    }
-</MudPaper>
+@if (movies is not null)
+{
+    <ul>
+        @foreach (var movie in movies.Results)
+        {
+            <li>@movie.Title</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Loading movies...</p>
+}
 
 @code {
     PopularMoviesPagedResponse? movies;

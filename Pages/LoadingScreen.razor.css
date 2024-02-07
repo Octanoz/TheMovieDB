@@ -1,0 +1,21 @@
+.background {
+    position: relative;
+    display: grid;
+    width: 400px;
+    height: 400px;
+    background: hsl(83, 27%, 65%);
+    justify-content: center;
+    align-items: center;
+}
+
+.film-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url(https://j.gifs.com/KYjYkL.gif);
+    background-size: cover;
+    mix-blend-mode: multiply;
+}
+
+.loading-text {
+    text-align: center;
+}
