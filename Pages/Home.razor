@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using TheMovieDB.Pages.Components
 @using TheMovieDB.Services
 @inject TMDBClient TMDB
 
@@ -8,12 +9,14 @@
 
 @if (movies is not null)
 {
-    <ul>
+    <MudGrid Spacing="2" Class="px-6">
         @foreach (var movie in movies.Results)
         {
-            <li>@movie.Title</li>
+            <MudItem xs="12" sm="6" md="4">
+                <PopularMovieCard Movie="@movie" />
+            </MudItem>
         }
-    </ul>
+    </MudGrid>
 }
 else
 {

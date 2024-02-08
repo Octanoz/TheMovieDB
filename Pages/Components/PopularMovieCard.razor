@@ -1,0 +1,33 @@
+﻿@if (Movie is not null)
+{
+    <MudCard>
+        @if (!String.IsNullOrEmpty(Movie.PosterPath))
+        {
+            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w300{Movie.PosterPath}")" Height="400" />
+        }
+        else
+        {
+            <MudCardMedia Image="./images/no-image-available-png_374_463" Height="200" />
+        }
+        <MudCardContent>
+            <MudText Typo="Typo.h6">@Movie.Title</MudText>
+            <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
+        </MudCardContent>
+    </MudCard>
+}
+else
+{
+    <MudCard>
+        <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="200" />
+        <MudCardContent>
+            <MudSkeleton Class="mx-auto" Width="30%" Height="40px" />
+            <MudSkeleton Width="80%" />
+            <MudSkeleton Width="100%" />
+        </MudCardContent>
+    </MudCard>
+}
+
+@code {
+    [Parameter]
+    public PopularMovie? Movie { get; set; }
+}
