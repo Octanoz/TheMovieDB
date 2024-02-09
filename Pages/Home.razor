@@ -1,18 +1,28 @@
 ﻿@page "/"
 @using TheMovieDB.Pages.Components
 @using TheMovieDB.Services
+@using MudBlazor.Services
 @inject TMDBClient TMDB
 
 <PageTitle>Home</PageTitle>
 
-<MudText Typo="Typo.h3" Class="ma-6">Popular Movies</MudText>
+<MudBreakpointProvider>
+    <MudHidden Breakpoint="Breakpoint.MdAndUp" Invert="true">
+        <MudText Typo="Typo.h3" Class="ma-6">Popular Movies</MudText>
+    </MudHidden>
+</MudBreakpointProvider>
+<MudBreakpointProvider>
+    <MudHidden Breakpoint="Breakpoint.MdAndUp">
+        <MudText Typo="Typo.h4" Class="ma-6">Popular Movies</MudText>
+    </MudHidden>
+</MudBreakpointProvider>
 
 @if (movies is not null)
 {
-    <MudGrid Spacing="2" Class="px-6">
+    <MudGrid Spacing="4" Class="px-6">
         @foreach (var movie in movies.Results)
         {
-            <MudItem xs="12" sm="6" md="4">
+            <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
                 <PopularMovieCard Movie="@movie" />
             </MudItem>
         }
@@ -20,7 +30,17 @@
 }
 else
 {
-    <p>Loading movies...</p>
+    @for (int i = 0; i < 10; i++)
+    {
+        <MudCard>
+            <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="200" />
+            <MudCardContent>
+                <MudSkeleton Class="mx-auto" Width="30%" Height="40px" />
+                <MudSkeleton Width="80%" />
+                <MudSkeleton Width="100%" />
+            </MudCardContent>
+        </MudCard>
+    }
 }
 
 @code {

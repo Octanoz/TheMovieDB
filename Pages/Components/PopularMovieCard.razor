@@ -1,15 +1,15 @@
 ﻿@if (Movie is not null)
 {
-    <MudCard>
+    <MudCard Elevation="5">
         @if (!String.IsNullOrEmpty(Movie.PosterPath))
         {
-            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w300{Movie.PosterPath}")" Height="400" />
+            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w440_and_h660_face{Movie.PosterPath}")" Height="400" />
         }
         else
         {
             <MudCardMedia Image="./images/no-image-available-png_374_463" Height="200" />
         }
-        <MudCardContent>
+        <MudCardContent Style="min-block-size: 8rem; background-color: hsl(331, 32%, 17%); color: hsl(53, 55%, 81%)">
             <MudText Typo="Typo.h6">@Movie.Title</MudText>
             <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
         </MudCardContent>
