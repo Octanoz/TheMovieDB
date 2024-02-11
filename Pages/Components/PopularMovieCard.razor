@@ -1,13 +1,13 @@
 ﻿@if (Movie is not null)
 {
-    <MudCard Elevation="5">
+    <MudCard Elevation="0" Class="flex-grow-1">
         @if (!String.IsNullOrEmpty(Movie.PosterPath))
         {
-            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w440_and_h660_face{Movie.PosterPath}")" Height="400" />
+            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/{regularWidth}{Movie.PosterPath}")" Height="@height" />
         }
         else
         {
-            <MudCardMedia Image="./images/no-image-available-png_374_463" Height="200" />
+            <MudCardMedia Image="./images/no-image-available-png_374_463" Height="@height" />
         }
         <MudCardContent Style="min-block-size: 8rem; background-color: hsl(331, 32%, 17%); color: hsl(53, 55%, 81%)">
             <MudText Typo="Typo.h6">@Movie.Title</MudText>
@@ -30,4 +30,9 @@ else
 @code {
     [Parameter]
     public PopularMovie? Movie { get; set; }
+
+    const int height = 400;
+    const string largeWidth = "w500"; //height: 750
+    const string regularWidth = "w342"; //height: 513
+    const string smallWidth = "w185"; //height: 278
 }

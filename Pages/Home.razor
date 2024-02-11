@@ -19,11 +19,16 @@
 
 @if (movies is not null)
 {
-    <MudGrid Spacing="4" Class="px-6">
+    <MudGrid Spacing="2" Class="px-6">
         @foreach (var movie in movies.Results)
         {
             <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
-                <PopularMovieCard Movie="@movie" />
+                <MudContainer Class="px-0" Style="width: min(100%, 342px)">
+                    <MudPaper Elevation="5"
+                        Class="mud-theme-secondary d-flex align-center justify-center mud-width-full rounded-lg pa-3">
+                        <PopularMovieCard Movie="@movie" />
+                    </MudPaper>
+                </MudContainer>
             </MudItem>
         }
     </MudGrid>
