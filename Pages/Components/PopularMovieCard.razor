@@ -1,20 +1,22 @@
 ﻿@using TheMovieDB.Models
 @if (Movie is not null)
 {
-    <MudCard Elevation="0" Class="flex-grow-1">
-        @if (!String.IsNullOrEmpty(Movie.PosterPath))
-        {
-            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/{regularWidth}{Movie.PosterPath}")" Height="@height" />
-        }
-        else
-        {
-            <MudCardMedia Image="./images/no-image-available-png_374_463" Height="@height" />
-        }
-        <MudCardContent Style="min-block-size: 8rem; background-color: hsl(331, 32%, 17%); color: hsl(53, 55%, 81%)">
-            <MudText Typo="Typo.h6">@Movie.Title</MudText>
-            <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
-        </MudCardContent>
-    </MudCard>
+        <MudCard Elevation="0" Class="flex-grow-1">
+            <MudLink Href="@($"/movie/{Movie.Id}")" Style="text-decoration: none">
+                @if (!String.IsNullOrEmpty(Movie.PosterPath))
+                {
+                    <MudCardMedia Image="@($"https://image.tmdb.org/t/p/{regularWidth}{Movie.PosterPath}")" Height="@height" />
+                }
+                else
+                {
+                    <MudCardMedia Image="./images/no-image-available-png_374_463" Height="@height" />
+                }
+                <MudCardContent Style="min-block-size: 8rem; background-color: hsl(331, 32%, 17%); color: hsl(53, 55%, 81%)">
+                    <MudText Typo="Typo.h6">@Movie.Title</MudText>
+                    <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
+                </MudCardContent>
+            </MudLink>
+        </MudCard>
 }
 else
 {

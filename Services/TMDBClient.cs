@@ -18,4 +18,6 @@ public class TMDBClient
     }
 
     public Task<PopularMoviesPagedResponse?> GetPopularMoviesPagedResponseAsync() => httpClient.GetFromJsonAsync<PopularMoviesPagedResponse>("movie/popular");
+
+    public Task<MovieDetails?> GetMovieDetailsAsync(int id) => httpClient.GetFromJsonAsync<MovieDetails>($"movie/{id}");
 }
