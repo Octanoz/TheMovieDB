@@ -1,0 +1,1257 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": true
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 9.0"
+  },
+  "analysisStartTime": "2025-08-13T14:43:50.0849733Z",
+  "analysisEndTime": "2025-08-13T14:43:52.2433446Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 4,
+      "incidents": 41,
+      "effort": 41
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 1,
+        "Optional": 2,
+        "Potential": 38,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 2,
+        "Project": 1,
+        "Api": 38
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "TheMovieDB.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 41,
+      "ruleInstances": [
+        {
+          "incidentId": "925c0abc-cf9d-4c8c-8d33-b2e2a84484cb",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly 9.0.8",
+              "protected": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly 9.0.8"
+            },
+            "kind": "File",
+            "path": "TheMovieDB.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly 9.0.8",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly 9.0.8",
+            "label": "Microsoft.AspNetCore.Components.WebAssembly 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.WebAssembly",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "9.0.8",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "cfdae8cb-af53-409f-9e20-93a838ebfb4f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly.DevServer 9.0.8",
+              "protected": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly.DevServer 9.0.8"
+            },
+            "kind": "File",
+            "path": "TheMovieDB.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly.DevServer 9.0.8",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.1\n\nRecommendation:\n\nMicrosoft.AspNetCore.Components.WebAssembly.DevServer 9.0.8",
+            "label": "Microsoft.AspNetCore.Components.WebAssembly.DevServer 8.0.1",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.WebAssembly.DevServer",
+              "PackageVersion": "8.0.1",
+              "PackageNewVersion": "9.0.8",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "151a70b6-c6f1-47e5-bd85-b592d74c62c9",
+          "ruleId": "Project.0002",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net9.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net9.0"
+            },
+            "kind": "File",
+            "path": "TheMovieDB.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net9.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net9.0"
+          }
+        },
+        {
+          "incidentId": "9500acff-6364-4873-9a10-effa0abf6358",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var builder = WebAssemblyHostBuilder.CreateDefault(args);",
+              "protected": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.CreateDefault(System.String[])"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "var builder = WebAssemblyHostBuilder.CreateDefault(args);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.CreateDefault(System.String[])",
+            "label": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.CreateDefault(System.String[])",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.createdefault",
+                "isCustom": false
+              }
+            ],
+            "line": 6,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "6e00e6d0-ed83-4cb3-922f-3b0700b1abb2",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var builder = WebAssemblyHostBuilder.CreateDefault(args);",
+              "protected": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "var builder = WebAssemblyHostBuilder.CreateDefault(args);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder",
+            "label": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder",
+                "isCustom": false
+              }
+            ],
+            "line": 6,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "b077c61f-3aa1-4bf4-84fe-2dd8330d3253",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.RootComponents.Add\u003CHeadOutlet\u003E(\u0022head::after\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection.Add\u0060\u00601(System.String)"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.RootComponents.Add\u003CHeadOutlet\u003E(\u0022head::after\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection.Add\u0060\u00601(System.String)",
+            "label": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection.Add\u0060\u00601(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.rootcomponentmappingcollection.add",
+                "isCustom": false
+              }
+            ],
+            "line": 8,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "a4559e1a-3990-4d95-b563-05caac11d1f2",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var builder = WebAssemblyHostBuilder.CreateDefault(args);",
+              "protected": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "var builder = WebAssemblyHostBuilder.CreateDefault(args);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder",
+            "label": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder",
+                "isCustom": false
+              }
+            ],
+            "line": 6,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "2e648016-3189-4efc-9aa7-6c6e1cf89584",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddMudServices();",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.AddMudServices();",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.services",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "17df3234-c268-4cd0-a023-fd90e4c5b675",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.RootComponents.Add\u003CApp\u003E(\u0022#app\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection.Add\u0060\u00601(System.String)"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.RootComponents.Add\u003CApp\u003E(\u0022#app\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection.Add\u0060\u00601(System.String)",
+            "label": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection.Add\u0060\u00601(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.rootcomponentmappingcollection.add",
+                "isCustom": false
+              }
+            ],
+            "line": 7,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "d8c78d76-0f53-4a67-8b47-4243d6207e63",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.RootComponents.Add\u003CApp\u003E(\u0022#app\u0022);",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.RootComponents"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.RootComponents.Add\u003CApp\u003E(\u0022#app\u0022);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.RootComponents",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.RootComponents",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.rootcomponents",
+                "isCustom": false
+              }
+            ],
+            "line": 7,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "2ec4eecd-77a9-48f6-8f1d-df3786008d2b",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.RootComponents.Add\u003CApp\u003E(\u0022#app\u0022);",
+              "protected": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.RootComponents.Add\u003CApp\u003E(\u0022#app\u0022);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection",
+            "label": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.rootcomponentmappingcollection",
+                "isCustom": false
+              }
+            ],
+            "line": 7,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "b8bdb775-3ae4-4ee0-b9a1-195e0593262f",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await builder.Build().RunAsync();",
+              "protected": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Build"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await builder.Build().RunAsync();",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Build",
+            "label": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Build",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.build",
+                "isCustom": false
+              }
+            ],
+            "line": 14,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "bce0dc5e-aa78-4334-ada7-f75604a1ef05",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.RootComponents.Add\u003CHeadOutlet\u003E(\u0022head::after\u0022);",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.RootComponents"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.RootComponents.Add\u003CHeadOutlet\u003E(\u0022head::after\u0022);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.RootComponents",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.RootComponents",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.rootcomponents",
+                "isCustom": false
+              }
+            ],
+            "line": 8,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "9c4a035b-444b-4dd3-ae0b-2e5d20b013a0",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.RootComponents.Add\u003CHeadOutlet\u003E(\u0022head::after\u0022);",
+              "protected": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.RootComponents.Add\u003CHeadOutlet\u003E(\u0022head::after\u0022);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection",
+            "label": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.RootComponentMappingCollection",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.rootcomponentmappingcollection",
+                "isCustom": false
+              }
+            ],
+            "line": 8,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "d0d4c458-ca7f-41be-800a-d6342555e966",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await builder.Build().RunAsync();",
+              "protected": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await builder.Build().RunAsync();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost",
+            "label": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhost",
+                "isCustom": false
+              }
+            ],
+            "line": 14,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "4f4feb24-7b02-4a85-8efb-be8d3f60aa22",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.services",
+                "isCustom": false
+              }
+            ],
+            "line": 10,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "0fd3f5d8-2f16-4e6e-8212-02027f71618d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.HostEnvironment"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.HostEnvironment",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.HostEnvironment",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.hostenvironment",
+                "isCustom": false
+              }
+            ],
+            "line": 10,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "8adf3546-2407-45f3-9f5b-5380fc4b23c8",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment.BaseAddress"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment.BaseAddress",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment.BaseAddress",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.iwebassemblyhostenvironment.baseaddress",
+                "isCustom": false
+              }
+            ],
+            "line": 10,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "c5d2a520-2034-4581-9971-68057bd36c8c",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment",
+            "label": "T:Microsoft.AspNetCore.Components.WebAssembly.Hosting.IWebAssemblyHostEnvironment",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.iwebassemblyhostenvironment",
+                "isCustom": false
+              }
+            ],
+            "line": 10,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "d6e68b4e-91bc-486b-be54-84e2fbdbc4c5",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped\u003CTMDBClient\u003E();",
+              "protected": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.AddScoped\u003CTMDBClient\u003E();",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services",
+            "label": "P:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder.Services",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhostbuilder.services",
+                "isCustom": false
+              }
+            ],
+            "line": 11,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "adb136b9-907b-4c9e-8aae-a84b4663f1b4",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Components.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await builder.Build().RunAsync();",
+              "protected": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost.RunAsync"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await builder.Build().RunAsync();",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost.RunAsync",
+            "label": "M:Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHost.RunAsync",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.webassembly.hosting.webassemblyhost.runasync",
+                "isCustom": false
+              }
+            ],
+            "line": 14,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "163c8d2a-1bbd-4b09-8967-0876b17e7857",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::.ctor(Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::.ctor(Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "df1f3335-6e3d-43d6-a5e1-dd9cf26f9cce",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::WriteMessage(Microsoft.Extensions.Logging.LogLevel,System.String,System.Int32,System.String,System.Exception)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::WriteMessage(Microsoft.Extensions.Logging.LogLevel,System.String,System.Int32,System.String,System.Exception)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "db0cf82a-7d91-413c-a6c2-d840c2bbfe52",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop, 8.0.6.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.JSInterop.JSCallResultType Microsoft.JSInterop.JSCallResultTypeHelper::FromGeneric()\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+              "protected": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.JSInterop.WebAssembly.dll",
+            "snippet": "Microsoft.JSInterop.JSCallResultType Microsoft.JSInterop.JSCallResultTypeHelper::FromGeneric()\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "protectedSnippet": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "label": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop",
+              "AssemblyVersion": "8.0.0.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.ijsunmarshalledobjectreference",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "09025ed9-51ed-43ca-93ac-dab05b6b7a4d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "6cc4708c-c217-484c-a6b9-d681a1719d1d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "c8fdf49d-bda4-4fe7-8b9a-ab83a9d13782",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601\u003CT\u003E::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601\u003CT\u003E::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "8d2af9cb-0f6f-4cf4-a28f-293331194270",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::.ctor(Microsoft.JSInterop.IJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::.ctor(Microsoft.JSInterop.IJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "f7e628f5-ec9d-45a9-a0f1-e06288c5a510",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.DefaultWebAssemblyJSRuntime::.ctor()\r\n    -\u003E System.Void Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime::.ctor()",
+              "protected": "M:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime.#ctor"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.DefaultWebAssemblyJSRuntime::.ctor()\r\n    -\u003E System.Void Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime::.ctor()",
+            "protectedSnippet": "M:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime.#ctor",
+            "label": "M:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime.#ctor",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "17831fb1-469d-43d8-8670-ebc7cbf47e74",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop, 8.0.6.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSObjectReference\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+              "protected": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.JSInterop.WebAssembly.dll",
+            "snippet": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSObjectReference\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "protectedSnippet": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "label": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop",
+              "AssemblyVersion": "8.0.0.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.ijsunmarshalledobjectreference",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "81364884-85be-4b64-b0d1-b17f612e7ab9",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop, 8.0.6.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Boolean Microsoft.JSInterop.WebAssembly.WebAssemblyJSObjectReferenceJsonConverter::CanConvert(System.Type)\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+              "protected": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.JSInterop.WebAssembly.dll",
+            "snippet": "System.Boolean Microsoft.JSInterop.WebAssembly.WebAssemblyJSObjectReferenceJsonConverter::CanConvert(System.Type)\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "protectedSnippet": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "label": "T:Microsoft.JSInterop.IJSUnmarshalledObjectReference",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop",
+              "AssemblyVersion": "8.0.0.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.ijsunmarshalledobjectreference",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "406c4cb1-3d99-457d-9f60-d0f29b0601f3",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop, 8.0.6.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledRuntime",
+              "protected": "T:Microsoft.JSInterop.IJSUnmarshalledRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.JSInterop.WebAssembly.dll",
+            "snippet": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime\r\n    -\u003E Microsoft.JSInterop.IJSUnmarshalledRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.IJSUnmarshalledRuntime",
+            "label": "T:Microsoft.JSInterop.IJSUnmarshalledRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop",
+              "AssemblyVersion": "8.0.0.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.ijsunmarshalledruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "9b1d038b-4004-488c-9d6c-a1e7bfd5616c",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Routing.Patterns.RoutePatternException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.Exception::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+              "protected": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Routing.Patterns.RoutePatternException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.Exception::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedSnippet": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "label": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "properties": {
+              "AssemblyName": "System.Runtime",
+              "AssemblyVersion": "8.0.0.0",
+              "AssemblyPublicKeyToken": "b03f5f7f11d50a3a"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/system.exception.exception",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "b123fe4b-a5dc-4010-911f-5a26b2832ff3",
+          "ruleId": "Api.0003",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Routing.Patterns.RoutePatternException::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.Exception::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+              "protected": "M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Routing.Patterns.RoutePatternException::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)\r\n    -\u003E System.Void System.Exception::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "protectedSnippet": "M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "label": "M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "properties": {
+              "AssemblyName": "System.Runtime",
+              "AssemblyVersion": "8.0.0.0",
+              "AssemblyPublicKeyToken": "b03f5f7f11d50a3a"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata",
+                "isCustom": true
+              },
+              {
+                "title": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "bc464acc-0e17-4485-95c5-f4da17744e9a",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601\u003CSystem.Object\u003E::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601\u003CSystem.Object\u003E::.ctor(System.String,Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "43718a9f-874d-49ff-88b7-03f8b1ad050c",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601\u003CSystem.Object\u003E Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider/\u003C\u003Ec__DisplayClass3_0::\u003CCreateLogger\u003Eb__0(System.String)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601\u003CSystem.Object\u003E Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider/\u003C\u003Ec__DisplayClass3_0::\u003CCreateLogger\u003Eb__0(System.String)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "09a8a72d-b3d4-4c52-baad-573d863cf96c",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::_jsRuntime\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::_jsRuntime\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "93af9480-bb9b-4784-a977-4484ed070e44",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::.ctor(Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::.ctor(Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "0b2afffb-8b73-4516-bcc1-17c874684181",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::.ctor(Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "System.Void Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLoggerProvider::.ctor(Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime)\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "d13ba48f-9f79-4dd6-a93c-6d2a2ea1c3b7",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::_jsRuntime\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime Microsoft.AspNetCore.Components.WebAssembly.Services.WebAssemblyConsoleLogger\u00601::_jsRuntime\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        },
+        {
+          "incidentId": "093b459b-fb2a-449e-86b8-8d45c85c7018",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.JSInterop.WebAssembly, 9.0.0-preview.6.24281.4.",
+          "projectPath": "TheMovieDB.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly.Services.DefaultWebAssemblyJSRuntime\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+              "protected": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime"
+            },
+            "kind": "Binary",
+            "path": "%USERPROFILE%\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.1\\lib\\net8.0\\Microsoft.AspNetCore.Components.WebAssembly.dll",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly.Services.DefaultWebAssemblyJSRuntime\r\n    -\u003E Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "protectedSnippet": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "label": "T:Microsoft.JSInterop.WebAssembly.WebAssemblyJSRuntime",
+            "properties": {
+              "AssemblyName": "Microsoft.JSInterop.WebAssembly",
+              "AssemblyVersion": "8.0.1.0",
+              "AssemblyPublicKeyToken": "adb9793829ddae60"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.webassembly.webassemblyjsruntime",
+                "isCustom": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "description": "Some API that lived in older versions of .NET frameworks were moved to standalone NuGet packages that could be added to projects explicitly.",
+      "label": "API available in NuGet package",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "description": "API is obsolete.",
+      "label": "API is obsolete",
+      "severity": "Optional",
+      "effort": 1
+    }
+  }
+}

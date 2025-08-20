@@ -1,7 +1,4 @@
 ﻿@page "/"
-@using TheMovieDB.Pages.Components
-@using TheMovieDB.Services
-@using MudBlazor.Services
 @inject TMDBClient TMDB
 
 <PageTitle>Home</PageTitle>
@@ -17,10 +14,10 @@
     </MudHidden>
 </MudBreakpointProvider>
 
-@if (movies is not null)
+@if (popularMovies is not null)
 {
-    <MudGrid Spacing="2" Class="px-6">
-        @foreach (var movie in movies.Results)
+    <MudGrid Spacing="6" Class="px-12">
+        @foreach(var movie in popularMovies.Results)
         {
             <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
                 <MudContainer Class="px-0" Style="width: min(100%, 342px)">
@@ -49,10 +46,10 @@ else
 }
 
 @code {
-    PopularMoviesPagedResponse? movies;
+    PopularMoviesPagedResponse? popularMovies;
 
     protected override async Task OnInitializedAsync()
     {
-        movies = await TMDB.GetPopularMoviesPagedResponseAsync();
+        popularMovies = await TMDB.GetPopularMoviesPagedResponseAsync();
     }
 }

@@ -1,23 +1,21 @@
-﻿using System.Net.Http.Json;
+﻿namespace TheMovieDB.Services;
 
-namespace TheMovieDB.Services;
+using TheMovieDB.Models;
+using System.Net.Http.Json;
 
 public class TMDBClient
 {
-    private readonly HttpClient _httpClient;
+    private readonly HttpClient httpClient;
 
-    public TMDBClient(HttpClient httpClient, IConfiguration config)
+    public TMDBClient(HttpClient client, IConfiguration config)
     {
-        _httpClient = httpClient;
-        _httpClient.BaseAddress = new("https://api.themoviedb.org/3/");
-        _httpClient.DefaultRequestHeaders.Accept.Add(new("application/json"));
+        httpClient = client;
+        httpClient.BaseAddress = new("https://api.themoviedb.org/3/");
+        httpClient.DefaultRequestHeaders.Accept.Add(new("application/json"));
 
         string apiKey = config["TMDBKey"] ?? throw new InvalidDataException("TMDBKey not found");
-        _httpClient.DefaultRequestHeaders.Authorization = new("Bearer", apiKey);
+        httpClient.DefaultRequestHeaders.Authorization = new("Bearer", apiKey);
     }
 
-    public Task<PopularMoviesPagedResponse?> GetPopularMoviesPagedResponseAsync()
-    {
-        return _httpClient.GetFromJsonAsync<PopularMoviesPagedResponse>("movie/popular");
-    }
+    public Task<PopularMoviesPagedResponse?> GetPopularMoviesPagedResponseAsync() => httpClient.GetFromJsonAsync<PopularMoviesPagedResponse>("movie/popular");
 }

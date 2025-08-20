@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿namespace TheMovieDB.Models;
 
-namespace TheMovieDB;
+using System.Text.Json.Serialization;
 
 public class PopularMovie
 {
@@ -15,7 +15,7 @@ public class PopularMovie
     public int Id { get; set; }
 
     [JsonPropertyName("original_language")]
-    public string OriginalLanguage { get; set; } = String.Empty;
+    public string OriginalLanguage { get; set; } = string.Empty;
 
     [JsonPropertyName("original_title")]
     public string? OriginalTitle { get; set; }
@@ -23,12 +23,12 @@ public class PopularMovie
     public float Popularity { get; set; }
 
     [JsonPropertyName("poster_path")]
-    public string PosterPath { get; set; } = String.Empty;
+    public string PosterPath { get; set; } = string.Empty;
 
     [JsonPropertyName("release_date")]
-    public string ReleaseDate { get; set; } = String.Empty;
+    public string ReleaseDate { get; set; } = string.Empty;
 
-    public string Title { get; set; } = String.Empty;
+    public string Title { get; set; } = string.Empty;
 
     public bool Video { get; set; }
 

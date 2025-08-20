@@ -1,4 +1,5 @@
-﻿@if (Movie is not null)
+﻿@using TheMovieDB.Models
+@if (Movie is not null)
 {
     <MudCard Elevation="0" Class="flex-grow-1">
         @if (!String.IsNullOrEmpty(Movie.PosterPath))

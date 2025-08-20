@@ -55,28 +55,44 @@
     }
 
     MudTheme CustomTheme = new()
+    {
+        PaletteLight = new()
         {
-            Palette = new()
-            {
-                // Tangerine - hsl - 21.0, 0.85, 0.69, 255
-                // Vanilla - hsl - 53.0, 0.55, 0.81, 255
-                // Olivine - hsl - 83.0, 0.27, 0.65, 255
-                // Lapis Lazuli - hsl - 209.0, 0.40, 0.40, 255
-                // Dark Purple - hsl - 331.0, 0.32, 0.17, 255
+            // Tangerine - hsl - 21.0, 0.85, 0.69, 255
+            // Vanilla - hsl - 53.0, 0.55, 0.81, 255
+            // Olivine - hsl - 83.0, 0.27, 0.65, 255
+            // Lapis Lazuli - hsl - 209.0, 0.40, 0.40, 255
+            // Dark Purple - hsl - 331.0, 0.32, 0.17, 255
 
-                Background = new(53.0, 0.55, 0.81, 255),
-                AppbarBackground = new(83.0, 0.27, 0.65, 255),
-                DrawerBackground = new(331.0, 0.32, 0.17, 255),
-                Primary = new(53.0, 0.55, 0.81, 255),
-                Secondary = new(331.0, 0.32, 0.17, 255),
-                Tertiary = new(83.0, 0.27, 0.65, 255),
-                AppbarText = new(21.0, 0.85, 0.59, 255),
-                DrawerText = new(53.0, 0.55, 0.81, 255),
-                PrimaryContrastText = new(331.0, 0.32, 0.17, 255),
-                SecondaryContrastText = new(53.0, 0.55, 0.81, 255),
-                TertiaryContrastText = new(21.0, 0.85, 0.69, 255),
-            }
-        };
+            Background = new(53.0, 0.55, 0.81, 255),
+            AppbarBackground = new(83.0, 0.27, 0.65, 255),
+            DrawerBackground = new(331.0, 0.32, 0.17, 255),
+            Primary = new(53.0, 0.55, 0.81, 255),
+            Secondary = new(331.0, 0.32, 0.17, 255),
+            Tertiary = new(83.0, 0.27, 0.65, 255),
+            AppbarText = new(21.0, 0.85, 0.59, 255),
+            DrawerText = new(53.0, 0.55, 0.81, 255),
+            PrimaryContrastText = new(331.0, 0.32, 0.17, 255),
+            SecondaryContrastText = new(53.0, 0.55, 0.81, 255),
+            TertiaryContrastText = new(21.0, 0.85, 0.69, 255),
+        },
+        PaletteDark = new()
+        {
+            // Dark Moss Green - hsl - 83.0, 0.65, 0.25, 255
+
+            Background = new(53.0, 0.55, 0.81, 255),
+            AppbarBackground = new(83.0, 0.65, 0.25, 255),
+            DrawerBackground = new(331.0, 0.32, 0.17, 255),
+            Primary = new(53.0, 0.55, 0.81, 255),
+            Secondary = new(331.0, 0.32, 0.17, 255),
+            Tertiary = new(83.0, 0.27, 0.65, 255),
+            AppbarText = new(21.0, 0.85, 0.59, 255),
+            DrawerText = new(53.0, 0.55, 0.81, 255),
+            PrimaryContrastText = new(331.0, 0.32, 0.17, 255),
+            SecondaryContrastText = new(53.0, 0.55, 0.81, 255),
+            TertiaryContrastText = new(21.0, 0.85, 0.69, 255),
+        }
+    };
 
     const string cameraIcon = @"
 <svg fill=""currentColor"" height=""24px"" width=""24px"" version=""1.1"" id=""Layer_1""

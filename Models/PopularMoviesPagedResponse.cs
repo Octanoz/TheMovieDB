@@ -1,12 +1,12 @@
-﻿using System.Text.Json.Serialization;
+﻿namespace TheMovieDB.Models;
 
-namespace TheMovieDB;
+using System.Text.Json.Serialization;
 
 public class PopularMoviesPagedResponse
 {
     public int Page { get; set; }
 
-    public PopularMovie[] Results { get; set; } = [];
+    public IEnumerable<PopularMovie> Results { get; set; } = [];
 
     [JsonPropertyName("total_pages")]
     public int TotalPages { get; set; }
