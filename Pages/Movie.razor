@@ -9,12 +9,13 @@ else
 {
     <PageTitle>@movieDetails.Title</PageTitle>
 
-    <MudImage Fluid="true" Src="@($"https://image.tmdb.org/t/p/original{movieDetails.BackdropPath}")" Alt="@($"{movieDetails.Title} backdrop")" Class="backdrop-image" Style="filter: grayscale(75%)" />
-    <MudCard Elevation="3" Width="300px" Class="absolute z-10" Style="inset: 300px 0 0 300px;">
-        <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w300{movieDetails.PosterPath}")" Height="500" Alt="" />
+    <MudImage Fluid="true" Src="@($"https://image.tmdb.org/t/p/original{movieDetails.BackdropPath}")" Alt="@($"{movieDetails.Title} backdrop")" Height="1000" Class="backdrop-image" Style="filter: grayscale(75%)" />
+    <MudCard Elevation="3" Width="300px" Class="absolute z-10" Style="margin-top: -20vw;" >
+        <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w300{movieDetails.PosterPath}")" Height="400" Alt="" />
     </MudCard>
-    <MudText Typo="Typo.h2">@movieDetails.Title</MudText>
-    <p>@movieDetails.Overview</p>
+    <MudPaper Elevation="0" Height="400px" Class="mud-theme-primary"></MudPaper>
+    <MudText Typo="Typo.h2" >@movieDetails.Title</MudText>
+    <MudText Typo="Typo.body1">@movieDetails.Overview</MudText>
 }
 
 @code {
