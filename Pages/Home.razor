@@ -1,9 +1,10 @@
 ﻿@page "/"
 @inject TMDBClient TMDB
+@using MudBlazor
 
 <PageTitle>Home</PageTitle>
 
-<MudBreakpointProvider>
+<MudBreakpointProvider OnBreakpointChanged="OnBreakpointChanged">
     <MudHidden Breakpoint="Breakpoint.MdAndUp" Invert="true">
         <MudText Typo="Typo.h3" Class="ma-6">Popular Movies</MudText>
     </MudHidden>
@@ -21,9 +22,15 @@
         {
             <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
                 <MudContainer Class="px-0" Style="width: min(100%, 342px)">
-                    <MudPaper Elevation="5"
-                        Class="mud-theme-secondary d-flex align-center justify-center mud-width-full rounded-lg pa-3">
-                        <PopularMovieCard Movie="@movie" />
+                    <MudPaper Elevation="5" Class="mud-theme-secondary d-flex align-center justify-center mud-width-full rounded-lg pa-3">
+                        @if (isSmallScreen)
+                        {
+                            <PopularMovieCardLandscape Movie="@movie" />
+                        }
+                        else
+                        {
+                            <PopularMovieCard Movie="@movie" />
+                        }
                     </MudPaper>
                 </MudContainer>
             </MudItem>
@@ -47,6 +54,13 @@ else
 
 @code {
     PopularMoviesPagedResponse? popularMovies;
+    bool isSmallScreen = false;
+
+    private void OnBreakpointChanged(Breakpoint breakpoint)
+    {
+        isSmallScreen = breakpoint <= Breakpoint.Sm;
+        StateHasChanged();
+    }
 
     protected override async Task OnInitializedAsync()
     {

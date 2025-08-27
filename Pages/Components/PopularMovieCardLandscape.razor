@@ -1,0 +1,40 @@
+@using TheMovieDB.Models
+@using MudBlazor
+
+@if (Movie is not null)
+{
+    <MudCard Elevation="0" Class="flex-grow-1">
+        <MudLink Href="@($"/movie/{Movie.Id}")" Style="text-decoration: none">
+            <div class="d-flex flex-row align-center" style="background-color: hsl(331, 32%, 17%); color: hsl(53, 55%, 81%); min-height: 140px;">
+                @if (!string.IsNullOrEmpty(Movie.PosterPath))
+                {
+                    <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w185{Movie.PosterPath}")" Class="me-4" Style="object-fit: cover; border-radius: 8px; width: 92px; height: 138px;" />
+                }
+                else
+                {
+                    <MudCardMedia Image="./images/no-image-available-png_374_463" Class="me-4" Style="object-fit: cover; border-radius: 8px; width: 92px; height: 138px;" />
+                }
+                <div class="d-flex flex-column justify-center">
+                    <MudText Typo="Typo.h6">@Movie.Title</MudText>
+                    <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
+                </div>
+            </div>
+        </MudLink>
+    </MudCard>
+}
+else
+{
+    <MudCard>
+        <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="140" />
+        <MudCardContent>
+            <MudSkeleton Class="mx-auto" Width="30%" Height="40px" />
+            <MudSkeleton Width="80%" />
+            <MudSkeleton Width="100%" />
+        </MudCardContent>
+    </MudCard>
+}
+
+@code {
+    [Parameter]
+    public PopularMovie? Movie { get; set; }
+}

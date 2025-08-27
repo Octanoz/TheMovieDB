@@ -1,5 +1,4 @@
 ﻿@inherits LayoutComponentBase
-@using TheMovieDB.Pages.Components
 
 <MudThemeProvider Theme="CustomTheme" DefaultScrollbar="true" />
 <MudDialogProvider />
@@ -24,7 +23,7 @@
             <MudPaper Width="180px" Elevation="0" />
         </MudHidden>
     </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+    <MudDrawer @bind-Open="drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu />
     </MudDrawer>
     <MudScrollToTop>
@@ -37,13 +36,13 @@
 </MudLayout>
 
 @code {
-    bool _drawerOpen = true;
+    bool drawerOpen = true;
 
     public int appBarZIndex = 1400;
 
     void DrawerToggle()
     {
-        _drawerOpen = !_drawerOpen;
+        drawerOpen = !drawerOpen;
         AppBarZIndex();
     }
 
