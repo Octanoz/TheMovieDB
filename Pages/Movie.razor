@@ -13,9 +13,9 @@ else
         @if (isMediumToSmallScreen)
         {
             // This block is shown only for screen sizes between Small (exclusive) and Medium (inclusive)
-            <MudContainer MaxWidth="MaxWidth.Medium" Class="pa-4 mt-4">
+            <MudContainer MaxWidth="MaxWidth.False" Class="pa-4 mt-4">
                 <MudGrid Spacing="4">
-                    <MudItem xs="12" md="4" Class="justify-center">
+                    <MudItem md="4" Class="justify-center">
                         <MudCard Elevation="3">
                             <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w300{movieDetails.PosterPath}")" Height="450" Alt="@($"{movieDetails.Title} poster")" />
                         </MudCard>
@@ -32,7 +32,7 @@ else
         else if (isSmallScreen)
         {
             // This block is shown only for screen sizes up to and including Small
-            <MudContainer MaxWidth="MaxWidth.False" Class="pa-4 mt-4">
+            <MudContainer MaxWidth="MaxWidth.Small" Class="pa-4 mt-4">
                 <MudGrid Spacing="4">
                     <MudItem xs="12" Class="justify-center">
                         <MudCard Elevation="3">
