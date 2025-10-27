@@ -16,9 +16,6 @@ else
             <MudContainer MaxWidth="MaxWidth.False" Class="pa-4 mt-4">
                 <MudGrid Spacing="4">
                     <MudItem md="4" Class="d-flex justify-center">
-                        @* <MudCard Elevation="3">
-                            <MudCardMedia Image="@($"https://image.tmdb.org/t/p/w300{movieDetails.PosterPath}")" Height="450" Alt="@($"{movieDetails.Title} poster")" />
-                        </MudCard> *@
                         <MudImage Fluid="true" Src="@($"https://image.tmdb.org/t/p/w300{movieDetails.PosterPath}")" Width="300" Alt="" />
                     </MudItem>
                     <MudItem xs="12" md="8">
@@ -44,7 +41,31 @@ else
                             <MudText Typo="Typo.body1">@movieDetails.Overview</MudText>
                         </MudPaper>
                     </MudItem>
-                </MudGrid>
+                    <MudItem xs="12" Class="d-flex justify-center">
+                        <MudPaper Elevation="0" Class="mud-theme-secondary pa-2" >
+                            @if (DateTime.TryParse(movieDetails.ReleaseDate, out DateTime releaseDate))
+                            {
+                                <MudChip T="string" Color="Color.Dark">@releaseDate.ToString("MMMM dd yyy")</MudChip>
+                            }
+                            @{
+                                var runtime = $"{movieDetails.Runtime / 60}h{movieDetails.Runtime % 60}m";
+                                int rating = (int)Math.Round(movieDetails.VoteAverage);
+                            }
+                            <MudChip T="string" Color="Color.Dark">@runtime</MudChip>
+                            <MudRating Class="pt-2 d-block" ReadOnly="true" SelectedValue="@rating" MaxValue="10" />
+                            <MudText Class="d-block pb-2 ms-2" Typo="Typo.caption" Color="Color.Primary">@movieDetails.VoteAverage out of @movieDetails.VoteCount votes</MudText>
+                            @foreach (var genre in movieDetails.Genres)
+                            {
+                                <MudChip T="string" Color="Color.Primary">@genre.Name</MudChip>
+                            }
+                            @if (!String.IsNullOrEmpty(movieDetails.Homepage))
+                            {
+                                <MudChip T="string" Color="Color.Info"><a href="@movieDetails.Homepage" target="_blank" style="color: whitesmoke;" >Homepage</a></MudChip>
+                            }
+                            <MudChip T="string" Variant="Variant.Outlined" Color="Color.Primary"><a href="@($"https://imdb.com/title/{movieDetails.ImdbId}")" style="color: linen;">IMDB</a></MudChip>
+                        </MudPaper>                    
+                    </MudItem>
+                </MudGrid>                    
             </MudContainer>
         }
         else
@@ -52,10 +73,10 @@ else
             // This block is shown for screen sizes larger than Medium
             <MudContainer MaxWidth="MaxWidth.False" Class="pa-0 position-relative">
                 <MudPaper Elevation="0" Class="mud-theme-primary overflow-hidden">
-                    <MudImage Fluid="true" Src="@($"https://image.tmdb.org/t/p/original{movieDetails.BackdropPath}")" Alt="@($"{movieDetails.Title} backdrop")" Style="width: 100%; object-fit: cover; filter: grayscale(75%) blur(2px);" />
+                    <MudImage Fluid="true" Src="@($"https://image.tmdb.org/t/p/original{movieDetails.BackdropPath}")" Alt="@($"{movieDetails.Title} backdrop")" Style="width: 100%; object-fit: contain; filter: grayscale(75%) blur(2px);" />
                 </MudPaper>
                 <MudContainer Fixed="true" Class="absolute pa-0 d-flex align-center justify-end pointer-events-none" Style="inset: 0">
-                    <MudPaper Elevation="0" Class="pa-6 rounded-lg" Style="background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(5px); max-width: 90%; width: 100%; pointer-events: auto;">
+                    <MudPaper Elevation="0" Class="pa-6 rounded-lg" Style="background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(8px); max-width: 90%; width: 100%; pointer-events: auto;">
                         <MudGrid>
                             <MudItem xs="3" >
                                 <MudImage Fluid="true" Src="@($"https://image.tmdb.org/t/p/w500{movieDetails.PosterPath}")" Width="500" Alt=""/>
@@ -65,6 +86,30 @@ else
                                     <MudText Typo="Typo.h2" Class="mb-4" Style="color: linen;">@movieDetails.Title</MudText>
                                     <MudText Typo="Typo.h4" Class="mb-4" Style="color: linen;"><em>@movieDetails.Tagline</em></MudText>
                                     <MudText Typo="Typo.body1" Style="color: linen;">@movieDetails.Overview</MudText>
+                                </MudPaper>
+                            </MudItem>
+                            <MudItem xs="2">
+                                <MudPaper Elevation="0" Style="background-color: transparent;">
+                                    @if (DateTime.TryParse(movieDetails.ReleaseDate, out DateTime releaseDate))
+                                    {
+                                        <MudChip T="string" Color="Color.Dark">@releaseDate.ToString("MMMM dd yyy")</MudChip>
+                                    }
+                                    @{
+                                        var runtime = $"{movieDetails.Runtime / 60}h{movieDetails.Runtime % 60}m";
+                                        int rating = (int)Math.Round(movieDetails.VoteAverage);
+                                    }
+                                    <MudChip T="string" Color="Color.Dark">@runtime</MudChip>
+                                    <MudRating Class="pt-2" ReadOnly="true" SelectedValue="@rating" MaxValue="10" Color="Color.Primary" />
+                                    <MudText Class="d-block pb-2 ms-2" Typo="Typo.caption" Color="Color.Primary">@movieDetails.VoteAverage out of @movieDetails.VoteCount votes</MudText>
+                                    @foreach (var genre in movieDetails.Genres)
+                                    {
+                                        <MudChip T="string" Color="Color.Secondary">@genre.Name</MudChip>
+                                    }
+                                    @if (!String.IsNullOrEmpty(movieDetails.Homepage))
+                                    {
+                                        <MudChip T="string" Variant="Variant.Outlined" Color="Color.Info"><a href="@movieDetails.Homepage" target="_blank" style="color: linen;">Homepage</a></MudChip>                                        
+                                    }
+                                    <MudChip T="string" Variant="Variant.Outlined" Color="Color.Warning"><a href="@($"https://imdb.com/title/{movieDetails.ImdbId}")" style="color: goldenrod;">IMDB</a></MudChip>
                                 </MudPaper>
                             </MudItem>
                         </MudGrid>
