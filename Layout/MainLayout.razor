@@ -5,7 +5,7 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Elevation="1" Style="@AppBarZIndex()">
+    <MudAppBar Elevation="1" Style="@AppBarZIndex()" >
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
             OnClick="@((e) => DrawerToggle())" />
         <MudHidden Breakpoint="Breakpoint.SmAndDown">
@@ -14,14 +14,16 @@
         <MudLink Href="/">
             <MudImage Src="./images/cinemaster_logo_60_60.jpg" Width="55" Height="55" Style="filter: brightness(90%)" />
         </MudLink>
-        <MudSpacer />
+        <MudHidden Breakpoint="Breakpoint.SmAndDown">
+            <MudSpacer />
+        </MudHidden>
         <MudText Typo="Typo.h4" Class="mx-6" Style="font-weight: 700; --mud-typography-h4-size: min(2rem, 8vw)">
             CineMaster</MudText>
         <MudHidden Breakpoint="Breakpoint.SmAndDown">
             <MudText Typo="Typo.h6">Movie Database</MudText>
         </MudHidden>
-        <MudSpacer />
         <MudHidden Breakpoint="Breakpoint.SmAndDown">
+            <MudSpacer />
             <MudPaper Width="180px" Elevation="0" />
         </MudHidden>
     </MudAppBar>
