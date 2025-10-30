@@ -41,7 +41,7 @@ public class MovieDetails
 
     [JsonPropertyName("release_date")]
     public string? ReleaseDate { get; set; }
-    public int Revenue { get; set; }
+    public long Revenue { get; set; }
     public int Runtime { get; set; }
 
     [JsonPropertyName("spoken_languages")]

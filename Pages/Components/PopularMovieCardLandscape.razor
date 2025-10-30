@@ -16,7 +16,10 @@
                 }
                 <div class="d-flex flex-column justify-center">
                     <MudText Typo="Typo.h6">@Movie.Title</MudText>
-                    <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
+                    @if (DateTime.TryParse(Movie.ReleaseDate, out var releaseDate))
+                    {
+                        <MudText Typo="Typo.body1">@releaseDate.ToString("dd MMMM, yyyy")</MudText>                        
+                    }
                 </div>
             </div>
         </MudLink>

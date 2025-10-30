@@ -17,7 +17,12 @@ public class TMDBClient
         httpClient.DefaultRequestHeaders.Authorization = new("Bearer", apiKey);
     }
 
-    public Task<PopularMoviesPagedResponse?> GetPopularMoviesPagedResponseAsync() => httpClient.GetFromJsonAsync<PopularMoviesPagedResponse>("movie/popular");
+    public Task<PopularMoviesPagedResponse?> GetPopularMoviesPagedResponseAsync(int page = 1)
+    {
+        page = Math.Clamp(page, 1, 500);
+
+        return httpClient.GetFromJsonAsync<PopularMoviesPagedResponse>($"movie/popular?page={page}");
+    }
 
     public Task<MovieDetails?> GetMovieDetailsAsync(int id) => httpClient.GetFromJsonAsync<MovieDetails>($"movie/{id}");
 }

@@ -13,7 +13,10 @@
                 }
                 <MudCardContent Style="min-block-size: 8rem; background-color: hsl(331, 32%, 17%); color: hsl(53, 55%, 81%)">
                     <MudText Typo="Typo.h6">@Movie.Title</MudText>
-                    <MudText Typo="Typo.body1">@DateTime.Parse(Movie.ReleaseDate).ToString("dd MMMM, yyyy")</MudText>
+                    @if (DateTime.TryParse(Movie.ReleaseDate, out var releaseDate))
+                    {
+                        <MudText Typo="Typo.body1">@releaseDate.ToString("dd MMMM, yyyy")</MudText>                    
+                    }
                 </MudCardContent>
             </MudLink>
         </MudCard>

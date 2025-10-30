@@ -1,0 +1,36 @@
+﻿<div class="d-flex flex-column align-center my-4">
+	<MudPagination Color="Color.Secondary" 
+				   Size="Size.Small" 
+				   Variant="Variant.Filled" 
+				   BoundaryCount="1" 
+				   MiddleCount="2" 
+				   Count="@TotalPages" 
+				   Selected="@CurrentPage"
+				   SelectedChanged="@SelectedChanged"
+				   ControlButtonClicked="@ControlButtonClicked"/>
+</div>
+
+@code {
+	[Parameter]
+	[EditorRequired]
+	public int CurrentPage { get; set; }
+
+	[Parameter]
+	[EditorRequired]
+	public int TotalPages { get; set; }
+
+	[Parameter]
+	public EventCallback<int> SelectedChanged { get; set; }
+
+	[Parameter]
+	public EventCallback<Page> ControlButtonClicked { get; set; }
+
+	public async Task NavigateToAsync(int page)
+	{
+		if (page >= 1 && page <= TotalPages)
+		{
+			CurrentPage = page;
+			await SelectedChanged.InvokeAsync(page);
+		}
+	}
+}

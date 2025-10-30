@@ -1,5 +1,6 @@
 ﻿@page "/"
 @inject TMDBClient TMDB
+@inject NavigationManager Navigation
 @using MudBlazor
 
 <PageTitle>Home</PageTitle>
@@ -17,6 +18,9 @@
 
 @if (popularMovies is not null)
 {
+    <MudContainer Class="d-flex justify-center my-4">
+        <MudPagination Color="Color.Secondary" Size="@(isSmallScreen ? Size.Small : Size.Medium)" BoundaryCount="1" MiddleCount="2" Count="500" Selected="CurrentPage" SelectedChanged="OnPageChanged" />
+    </MudContainer>
     <MudGrid Spacing="6" Class="px-12">
         @foreach(var movie in popularMovies.Results)
         {
@@ -36,24 +40,39 @@
             </MudItem>
         }
     </MudGrid>
+    <MudContainer Class="d-flex justify-center my-4">
+        <MudPagination Color="Color.Secondary" Size="@(isSmallScreen ? Size.Small : Size.Medium)" BoundaryCount="1" MiddleCount="2" Count="500" Selected="CurrentPage" SelectedChanged="OnPageChanged" />
+    </MudContainer>
 }
 else
 {
-    @for (int i = 0; i < 10; i++)
+    <MudGrid Spacing="6" Class="px-12">
+    @for (int i = 0; i < 12; i++)
     {
-        <MudCard>
-            <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="200" />
-            <MudCardContent>
-                <MudSkeleton Class="mx-auto" Width="30%" Height="40px" />
-                <MudSkeleton Width="80%" />
-                <MudSkeleton Width="100%" />
-            </MudCardContent>
-        </MudCard>
+        <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
+            <MudCard>
+                <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="700" />
+                <MudCardContent>
+                    <MudSkeleton Class="mx-auto" Width="30%" Height="400px" />
+                    <MudSkeleton Width="80%" />
+                    <MudSkeleton Width="100%" />
+                </MudCardContent>
+                <MudCardActions>
+                    <MudSkeleton Width="64px" Height="40px" Class="ml-2" />
+                    <MudSkeleton Width="105px" Height="40px" Class="ml-3" />
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
     }
+    </MudGrid>
 }
 
 @code {
     PopularMoviesPagedResponse? popularMovies;
+
+    [SupplyParameterFromQuery]
+    public int CurrentPage { get; set; }
+
     bool isSmallScreen = false;
 
     private void OnBreakpointChanged(Breakpoint breakpoint)
@@ -64,6 +83,23 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        popularMovies = await TMDB.GetPopularMoviesPagedResponseAsync();
+        if (CurrentPage <= 0)
+            CurrentPage = 1;
+
+        await LoadPopularMovies();
+    }
+
+    private async Task OnPageChanged(int page)
+    {
+        CurrentPage = Math.Clamp(page, 1, 500);
+        string url = Navigation.GetUriWithQueryParameter("CurrentPage", CurrentPage);
+        Navigation.NavigateTo(url);
+        await LoadPopularMovies();
+    }
+
+    private async Task LoadPopularMovies()
+    {
+        popularMovies = await TMDB.GetPopularMoviesPagedResponseAsync(CurrentPage);
+        StateHasChanged();
     }
 }
